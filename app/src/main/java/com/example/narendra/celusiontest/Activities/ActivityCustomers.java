@@ -70,7 +70,7 @@ public class ActivityCustomers extends AppCompatActivity {
 
             CustomerDao customerDao = daoSession.getCustomerDao();
             Gson gson = new Gson();
-            for (int i = 0; i <= response.length(); i++) {
+            for (int i = 0; i < response.length(); i++) {
                 Customer customer = gson.fromJson(response.get(i).toString(), Customer.class);
              //   Log.d("Narendra", i + "  " + response.get(i).toString());
                 customerDao.insertOrReplace(customer);
